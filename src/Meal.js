@@ -1,20 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 function Meal(props) {
     return (
         <div>
-            {/* <p>Name: {props.mealName}</p>
-            <p>Amount: {props.amount} oz</p>
-            <p>Calories: {props.calories} kcal</p>
-            <p>Carbohydrates: {props.carbs} g</p>
-            <p>Protein: {props.protein} g</p>
-            <p>Fat: {props.fat} g</p> */}
-            
             <div>
                 <p style={{fontSize: '32px', fontWeight: 'bold', marginBottom: '10px'}}>{props.mealName} {props.amount} oz</p>
             </div>
             <div style={{fontSize: '24px', fontWeight: 'bold'}}>Calories: {props.calories} kcal</div>
-
             <div >
                 <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', marginTop: '60px', marginBottom: '100px'}}>
                     <div style={{
@@ -60,10 +52,7 @@ function Meal(props) {
                         <div>{props.fat} g</div>
                     </div>
                 </div>
-                
-                
             </div>
-            
         </div>
     )
 }
