@@ -8,7 +8,7 @@ function Meal(props) {
             </div>
             <div style={{fontSize: '24px', fontWeight: 'bold'}}>Calories: {props.calories} kcal</div>
             <div >
-                <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-evenly', marginTop: '60px', marginBottom: '100px'}}>
+                <div className="foodinfo">
                     <div style={{
                         fontSize: '28px',
                         border: '2px solid #b6e3c2',
