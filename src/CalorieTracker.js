@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import MealList from './MealList';
 import TotalCalories from './TotalCalories';
-import { Typography } from '@mui/material';
+
 
 
 function CalorieTracker() {
@@ -80,7 +80,7 @@ function CalorieTracker() {
             <CssBaseline />
             
             <div style={{ marginTop: '100px', marginBottom: '100px' }}>
-                <Typography style={{ letterSpacing: '7px', marginBottom: '20px' }} variant="h1">CalorieCounter</Typography>
+                <h1 className='header' variant="h1">CalorieCounter</h1>
             </div>
 
             <Container>

@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@media (max-width: 375px) {
+  .header {
+    font-size: 40px;
+    letter-spacing: '9px'; 
+    margin-bottom: '20px'
+  }
+}
+  @media (min-width: 440px) {
+    .header {
+      font-size: 62px;
+      letter-spacing: '9px'; 
+      margin-bottom: '20px'
+    }
+  /* Your styles for devices with a minimum width of 375px */
+}
