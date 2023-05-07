@@ -51,7 +51,7 @@ function Meal(props) {
                         display: 'inline-block',
                         padding: '80px 90px',
                         textAlign: 'center',
-                        marginBottom: '20px',
+                        marginBottom: '60px',
                         marginLeft: '20px',
                         marginRight: '20px',
                     }}>
