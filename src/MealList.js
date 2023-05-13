@@ -11,20 +11,35 @@ import Autocomplete from "@mui/material/Autocomplete";
 function MealList(props) {
     const [open, setOpen] = useState(false);
     const [inputValue, setInputValue] = useState("");
+    const [submitAttempted, setSubmitAttempted] = useState(false);
 
-    function changeCals() {
-        props.setTotalcals(2500);
-      }
+    const handlePreviewFoodItem = (e) => {
+        e.preventDefault();
+        if (inputValue === "" || props.amount === "" || props.selectedQuery === "") {
+            setSubmitAttempted(true);
+        } else {
+            setSubmitAttempted(false);
+            props.previewFoodItem(e);
+        }
+    }
+    
+
+
+
+    // function changeCals() {
+    //     props.setTotalcals(2500);
+    //   }
     
     return (
         <>
         <Container >
             <Typography>Search Food</Typography>
-            <form onSubmit={props.previewFoodItem}>
+            <form onSubmit={handlePreviewFoodItem}>
         
                 <Container style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '20px', marginBottom: '20px'}}>
 
                     <Autocomplete
+                        
                         open={open}
                         onOpen={() => {
                             if (inputValue) {
@@ -68,19 +83,24 @@ function MealList(props) {
                     </Select>
                 </Container>
                     
-                <Button style={{marginBottom: '40px', backgroundColor: '#399952'}} variant="contained" color="primary" align="left" type="submit">Add Food</Button>
+                <Button style={{marginBottom: '40px', backgroundColor: '#399952'}} variant="contained" color="primary" align="left" type="submit" >Add Food</Button>
+                {submitAttempted && (
+                <p style={{ fontSize: '20px', color: '#c2272e', marginTop: '10px'}}>Search for new food item</p>
+)}
             </form>
             
-            {props.foodPreview ? <> <Meal 
-                mealName={props.foodPreview.hints[0].food.label} 
-                amount={props.amount} 
-                calories={props.calories} 
-                carbs={props.carbs} 
-                protein={props.protein} 
-                fat={props.fat} />
-                <Button style={{marginBottom: '40px', backgroundColor: '#399952'}} variant="contained" color="primary" align="left" type="submit" onClick={changeCals}>Reset Calories</Button>
-                
-                </> : null}
+            {props.foodItems.map((item, index) => (
+                <Meal 
+                    key={index}
+                    mealName={item.name} 
+                    amount={item.amount} 
+                    calories={item.calories} 
+                    carbs={item.carbs} 
+                    protein={item.protein} 
+                    fat={item.fat} 
+                    removeMeal={() => props.removeMeal(index)}
+                />
+            ))}
 
 
             

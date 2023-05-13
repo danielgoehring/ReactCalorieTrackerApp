@@ -6,6 +6,7 @@ import TotalCalories from './TotalCalories';
 
 
 
+
 function CalorieTracker() {
 
     const [name, setName] = useState("");
@@ -19,6 +20,25 @@ function CalorieTracker() {
     const [protein, setProtein] = useState(0);
     const [fat, setFat] = useState(0);
     const [query_results, setQueryResults] = useState([]);
+
+    const [foodItems, setFoodItems] = useState([]);
+    
+    
+
+    function removeMeal(indexToRemove) {
+        const mealToRemove = foodItems[indexToRemove];
+        setFoodItems(prevFoodItems => prevFoodItems.filter((_, index) => index !== indexToRemove));
+        setTotalcals(prevTotalcals => {
+        let newTotalcals = prevTotalcals + parseFloat(mealToRemove.calories);
+        // Check if the new total exceeds the initial total
+        if (newTotalcals > 2500) {
+            newTotalcals = 2500;
+        }
+        return newTotalcals;
+    });
+    }
+    
+
 
     async function fetchAPI() {
         const APP_ID = "7020f5e0";
@@ -57,16 +77,32 @@ function CalorieTracker() {
         setFoodPreview(data);
         
         const numServings = (1 / 4) * (amount / 1);
-        const calories = (data.parsed[0].food.nutrients.ENERC_KCAL * numServings).toFixed(1);
-        const carbs = (data.parsed[0].food.nutrients.CHOCDF * numServings).toFixed(1);
-        const protein = (data.parsed[0].food.nutrients.PROCNT * numServings).toFixed(1);
-        const fat = (data.parsed[0].food.nutrients.FAT * numServings).toFixed(1);
+        const calories = Math.round(data.parsed[0].food.nutrients.ENERC_KCAL * numServings).toFixed(1);
+        const carbs = Math.round(data.parsed[0].food.nutrients.CHOCDF * numServings).toFixed(1);
+        const protein = Math.round(data.parsed[0].food.nutrients.PROCNT * numServings).toFixed(1);
+        const fat = Math.round(data.parsed[0].food.nutrients.FAT * numServings).toFixed(1);
 
         setCalories(calories);
         setCarbs(carbs);
         setProtein(protein);
         setFat(fat);
         setTotalcals(totalcals-calories);
+        
+
+        const newFoodItem = {
+            name: data.hints[0].food.label,
+            amount,
+            calories,
+            carbs,
+            protein,
+            fat,
+        };
+    
+        setFoodItems(prevFoodItems => [...prevFoodItems, newFoodItem]);
+        setSelectedQuery("");
+        setAmount("");
+
+
     }
 
     const handleSubmit = (e) => {
@@ -101,7 +137,11 @@ function CalorieTracker() {
                 carbs={carbs} 
                 protein={protein} 
                 fat={fat} 
-                setTotalcals={setTotalcals}/>
+                setTotalcals={setTotalcals}
+                selectedQuery={selectedQuery}
+                foodItems={foodItems}
+                removeMeal={removeMeal}/>
+                
 
             </Container>
         </>
