@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import TextField from '@mui/material/TextField';
 import Meal from './Meal';
 import Button from '@mui/material/Button';
+import Input from '@mui/material/Input';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import Autocomplete from "@mui/material/Autocomplete";
@@ -38,47 +39,66 @@ function MealList(props) {
         
                 <Container style={{display: 'flex', alignItems: 'center', justifyContent: 'center', marginTop: '20px', marginBottom: '20px'}}>
 
-                    <Autocomplete
-                        
-                        open={open}
-                        onOpen={() => {
-                            if (inputValue) {
-                                setOpen(true);
-                            }
-                        }}
-                        onClose={() => setOpen(false)}
-                        inputValue={inputValue}
-                        onInputChange={(e, value, reason) => {
-                            props.foodLookup(value)
-                            setInputValue(value);
-                            props.setSelectedQuery(value)
+                <Autocomplete
+                    open={open}
+                    onOpen={() => {
+                        if (inputValue) {
+                        setOpen(true);
+                        }
+                    }}
+                    onClose={() => setOpen(false)}
+                    inputValue={inputValue}
+                    onInputChange={(e, value, reason) => {
+                        props.foodLookup(value)
+                        setInputValue(value);
+                        props.setSelectedQuery(value)
 
-                            if (!value) {
-                                setOpen(false);
-                            }
+                        if (!value) {
+                        setOpen(false);
+                        }
+                    }}
+                    options={props.queryResults}
+                    style={{ width:300}}
+                    popupIcon={null}
+                    renderInput={(params) => (
+                        <TextField 
+                        {...params} 
+                        label="Search" 
+                        variant="outlined" 
+                        InputProps={{
+                            ...params.InputProps,
+                            style: {
+                            borderColor: '#c7c7c7', // set your desired color here
+                            },
                         }}
-                        options={props.queryResults}
-                        style={{ width:300}}
-                        popupIcon={null}
-                        renderInput={(params) => (
-                            <TextField {...params} label="Search" variant="outlined" />
-                        )}
-                    />
+                        />
+                    )}
+                />
                 </Container>
                 <Container style={{marginBottom: '40px'}}>
                     <Typography style={{marginBottom: '20px', marginTop: '40px'}}>Select Ounces</Typography>
                     
-                    <Select label ="Enter Number of Ounces" value={props.amount} onChange={(e) => props.setAmount(e.target.value)}
-                                style={{ width:300}}
-                                displayEmpty
-                                placeholder="oz"
-                                MenuProps={{
-                                PaperProps: {
-                                    style: { maxHeight: 220},
-                                },
-                                }}>
+                    <Select 
+                        label ="Enter Number of Ounces" 
+                        value={props.amount} 
+                        onChange={(e) => props.setAmount(e.target.value)}
+                        style={{ width: 300, border: '1px solid #c7c7c7', padding: '10px', borderRadius: '5px' }} 
+                        input={
+                            <Input 
+                            style={{ border: '1px solid #c7c7c7' }} 
+                            disableUnderline  // This will remove the underline
+                            />
+                        }
+                        displayEmpty
+                        placeholder="oz"
+                        MenuProps={{
+                            PaperProps: {
+                            style: { maxHeight: 220 },
+                            },
+                        }}
+                        >
                         {[...Array(101).keys()].map(i => (
-                            <MenuItem value={i}>{i}</MenuItem>
+                            <MenuItem value={i} key={i}>{i}</MenuItem> 
                         ))}
                     </Select>
                 </Container>
