@@ -24,13 +24,6 @@ function MealList(props) {
         }
     }
     
-
-
-
-    // function changeCals() {
-    //     props.setTotalcals(2500);
-    //   }
-    
     return (
         <>
         <Container >
@@ -103,7 +96,7 @@ function MealList(props) {
                     </Select>
                 </Container>
                     
-                <Button style={{marginBottom: '40px', backgroundColor: '#399952'}} variant="contained" color="primary" align="left" type="submit" >Add Food</Button>
+                <Button style={{marginBottom: '40px', backgroundColor: '#258db3'}} variant="contained" color="primary" align="left" type="submit" >Add Food</Button>
                 {submitAttempted && (
                 <p style={{ fontSize: '20px', color: '#c2272e', marginTop: '10px'}}>Search for new food item</p>
 )}

@@ -3,6 +3,7 @@ import Container from '@mui/material/Container';
 import CssBaseline from '@mui/material/CssBaseline';
 import MealList from './MealList';
 import TotalCalories from './TotalCalories';
+import caloriecounterLogo from './assets/caloriecounterLogo.png';
 
 
 
@@ -115,12 +116,12 @@ function CalorieTracker() {
         <>
             <CssBaseline />
             
-            <div style={{ marginTop: '100px', marginBottom: '100px' }}>
-                <h1 className='header' variant="h1">CalorieCounter</h1>
+            <div className="header_container">
+            <img src={caloriecounterLogo} alt="Example" />
             </div>
+            
 
             <Container>
-
                 <TotalCalories totalCalories={totalcals}/>
                 <MealList 
                 previewFoodItem={previewFoodItem} 
@@ -141,8 +142,6 @@ function CalorieTracker() {
                 selectedQuery={selectedQuery}
                 foodItems={foodItems}
                 removeMeal={removeMeal}/>
-                
-
             </Container>
         </>
     )
