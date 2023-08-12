@@ -1,17 +1,27 @@
 .App {
   text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
-
-
 
 body {
   background-color: #5e5e5e;
-  font-family: 'Hind Vadodara', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+}
+
+button {
+  font-family: 'Roboto Mono', monospace;
 }
 
 img {
   width: 360px;
   height: auto;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -20,7 +30,6 @@ img {
 }
 
 .header_container {
-  
   margin-bottom: 20px;
 }
 
@@ -39,83 +48,88 @@ img {
   color: #61dafb;
 }
 
-.mealFontSize {
-  margin-top: 40px; 
-  margin-bottom: 40px;
-  
-}
+/* .mealFontSize {
+  border-bottom: 1px solid gray;
+} */
 
 .macroContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  
+  border-bottom: 1px solid rgb(207, 207, 207);
+  border-left: 1px solid rgb(207, 207, 207);
+  border-right: 1px solid rgb(207, 207, 207);
+  background-color: rgb(246, 246, 246);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.containerMacros {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.containerMacros div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 20px;
+  font-weight: bold;
 }
 
 .ounce-amount {
-  margin-bottom: 40px;
-  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  font-size: 22px;
   font-weight: bold;
 }
 
 .mealContainer {
   display: flex;
-  justify-content: center;
-  margin-right: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-right: -170px;
 }
 
 .calorieContainer {
-  margin-left: 40px;
-  margin-right: 40px;
-  font-size: 20px;
+  width: 58px; /* Again, adjust based on actual content and design requirements */
+  text-align: left; /* This ensures the numbers are right-aligned within their container */
+}
+
+.calorieContainer2 {
+  flex: 2; /* Adjust this according to your layout needs */
+  width: 200px; /* You might need to adjust this as well */
+  text-align: left; /* This ensures that the text is right-aligned within its container */
+  margin-left: 20px;
   font-weight: bold;
-  margin-top: 10px;
 }
 
 .twenty {
   margin-bottom: 20px;
 }
 
-.carbContainer {
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.proteinContainer {
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
-.fatContainer {
-  margin-bottom: 20px;
-  margin-left: 40px;
-  margin-right: 40px;
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 10px;
-}
-
 .removeMealContainer {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
-  margin-top: 20px;
-  margin-left: 20px;
+  padding: 10px 5px;
 }
 
 .removeBtn {
   padding: 10px;
-  background-color: #eb4034;
-  color:white;
-  border: 1px solid #eb4034;
+  background-color: #c92a2a;
+  color: white;
+  border: 1px solid #c92a2a;
   cursor: pointer;
-  font-weight: bold; 
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .carbstyle {
@@ -124,6 +138,30 @@ img {
   margin-right: 40px;
 }
 
+.toggleFoodSearchBtn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #20545c;
+  font-weight: bold;
+  font-size: 16px;
+  margin-bottom: 60px;
+}
+
+.container-1 {
+  display: flex;
+  margin: 0 20px;
+}
+
+.container-2 {
+  display: flex;
+  margin-right: 140px;
+}
+
+.container-3 {
+  text-align: center;
+  margin: 0 20px;
+}
 
 @media (min-width: 500px) {
   .header {
@@ -137,94 +175,89 @@ img {
     height: auto;
   }
 }
-  @media (max-width: 500px) {
-    
-    /* .mealFontSize {
+@media (max-width: 500px) {
+  /* .mealFontSize {
       margin-top: 40px; 
       margin-bottom: 40px;
       font-size: 12px;
     } */
-    .calorieSize {
-      font-size: 18px;
-    }
 
-    .ounce-amount {
-      font-size: 24px;
-    }
-
-    .carbContainer {
-      margin: 0;
-    }
-
-    .proteinContainer {
-      margin: 0
-    }
-
-    .fatContainer {
-    margin: 0;
-  margin-left: 40px;
-  margin-right: 40px;
-    }
-
-    .calorieContainer {
-      margin: 0
-    }
-
-    .mealContainer {
-      margin: 0;
-    }
-    
-    .removeBtn {
-      font-size: 12px;
-      margin-right: 50px;
-    }
-
-    .macroContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-left: 40px;
-    }
-
-
+  .container-1 {
+  }
+  .calorieSize {
+    font-family: 'Roboto Mono', monospace; /* or any other monospace font */
   }
 
+  .ounce-amount {
+    font-size: 24px;
+  }
 
-    @media (max-width: 900px) {
-      .header {
-        
-        letter-spacing: '9px'; 
-        margin-bottom: '20px'
-      } 
+  .carbContainer {
+    margin: 0;
+  }
 
-      .fooditem {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
+  .proteinContainer {
+    margin: 0;
+  }
 
-      }
-      }
+  .fatContainer {
+    margin: 0;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 
-      @media (min-width: 901px) {
-        .fooditem {
-          display: flex;
-          align-items: center;
-          justify-content: space-evenly;
-          margin-top: 60px;
-          margin-bottom: 100px;
-          
-          
-          }
+  .calorieContainer {
+    margin: 0;
+  }
 
-          .foodinfo {
-            margin-right: 20px;
-          }
-      }
-      @media (prefers-reduced-motion: no-preference) {
-        .App-logo {
-          animation: App-logo-spin infinite 20s linear;
-        }
-      }
+  .mealContainer {
+    margin: 0;
+  }
+
+  .removeBtn {
+    font-size: 12px;
+    margin-right: 50px;
+  }
+
+  .macroContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .header {
+    letter-spacing: '9px';
+    margin-bottom: '20px';
+  }
+
+  .fooditem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 901px) {
+  .fooditem {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 60px;
+    margin-bottom: 100px;
+  }
+
+  .foodinfo {
+    margin-right: 20px;
+  }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
 
 @keyframes App-logo-spin {
   from {
