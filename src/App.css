@@ -148,6 +148,29 @@ img {
   margin-bottom: 60px;
 }
 
+.container-01 {
+  margin-top: 60px;
+}
+
+.container-02 {
+  display: flex;
+  justify-content: center;
+}
+
+.container-03 {
+  background-color: #20545c;
+  border-top-left-radius: 2px;
+  border-top-right-radius: 2px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  width: 50%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .container-1 {
   display: flex;
   margin: 0 20px;
@@ -161,6 +184,19 @@ img {
 .container-3 {
   text-align: center;
   margin: 0 20px;
+}
+
+.formContainerMain {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.formContainerMain2 {
+  margin-right: 40px;
 }
 
 @media (min-width: 500px) {
@@ -182,7 +218,65 @@ img {
       font-size: 12px;
     } */
 
-  .container-1 {
+  .formContainerMain2 {
+    margin-bottom: 30px;
+  }
+  .macroContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(207, 207, 207);
+    border-left: 1px solid rgb(207, 207, 207);
+    border-right: 1px solid rgb(207, 207, 207);
+    background-color: rgb(246, 246, 246);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  .macroContainer {
+    font-size: 12px;
+  }
+
+  .calorieContainer2 div {
+    flex: 2; /* Adjust this according to your layout needs */
+    width: 200px; /* You might need to adjust this as well */
+    text-align: left; /* This ensures that the text is right-aligned within its container */
+
+    font-weight: bold;
+  }
+
+  .formContainerMain {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .containerMacros div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 10px;
+
+    font-weight: bold;
+  }
+
+  .containerMacros {
+    margin-right: -84px;
+  }
+
+  .container-03 {
+    width: 100%;
+  }
+
+  .container-03 div {
+    font-size: 12px;
   }
   .calorieSize {
     font-family: 'Roboto Mono', monospace; /* or any other monospace font */
@@ -212,18 +306,6 @@ img {
 
   .mealContainer {
     margin: 0;
-  }
-
-  .removeBtn {
-    font-size: 12px;
-    margin-right: 50px;
-  }
-
-  .macroContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-left: 40px;
   }
 }
 

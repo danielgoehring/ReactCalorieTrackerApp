@@ -46,28 +46,9 @@ function MealList(props) {
 
   return (
     <>
-      <div style={{ marginTop: '60px' }}>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-          }}
-        >
-          <div
-            style={{
-              backgroundColor: '#20545c',
-              borderTopLeftRadius: '2px',
-              borderTopRightRadius: '2px',
-              height: '60px',
-              display: 'flex',
-              justifyContent: 'space-between',
-              alignItems: 'center',
-              color: 'white',
-              width: '50%',
-              maxWidth: '800px',
-              margin: '0 auto',
-            }}
-          >
+      <div className="container-01">
+        <div className="container-02">
+          <div className="container-03">
             <div className="container-1">Name</div>
             <div className="container-2">
               <div className="container-3">
@@ -105,17 +86,8 @@ function MealList(props) {
 
         {showFoodSearch ? (
           <form onSubmit={handlePreviewFoodItem}>
-            <div
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                marginTop: '40px',
-                marginBottom: '20px',
-                textAlign: 'left',
-              }}
-            >
-              <div style={{ marginRight: '40px' }}>
+            <div className="formContainerMain">
+              <div className="formContainerMain2">
                 <Typography
                   style={{
                     paddingBottom: '10px',
