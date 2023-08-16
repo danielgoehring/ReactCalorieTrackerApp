@@ -1,6 +1,6 @@
 # Calorie Counter App
 
-Welcome to the Calorie Counter app repository! This app allows you to track your calorie intake by searching for foods and retrieving nutrition information from a food database API.
+Welcome to the Calorie Counter app repository! This app allows you to track your calorie intake by searching for foods and retrieving nutrition information from the Edamam Food database API.
 
 ## Table of Contents
 
@@ -17,17 +17,15 @@ Welcome to the Calorie Counter app repository! This app allows you to track your
 
 ## Description
 
-The Calorie Counter app is a web application built using React.js and Material UI. It provides a user-friendly interface for tracking calorie intake by searching for different foods and retrieving nutrition information from a food database API.
+The Calorie Counter app is a web application built using React.js and Material UI. It provides a user-friendly interface for tracking calorie intake by searching for different foods and retrieving nutrition information from the Edamam Food Database API.
 
 ## Demo
-
-![Calorie Counter App Demo](./demo.gif) <!-- Replace with your actual demo GIF or screenshot -->
 
 You can try out the live app [here](https://your-calorie-counter-app-url.com).
 
 ## Features
 
-- Search for foods using the food database API
+- Search for foods using the Edamam food database API with autocomplete functionality
 - View nutrition information for selected foods
 - User-friendly interface with Material UI components
 - Calorie tracking and intake monitoring
