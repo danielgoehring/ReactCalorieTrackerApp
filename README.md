@@ -41,3 +41,7 @@ You can try out the live app [here](https://your-calorie-counter-app-url.com).
 
    ```bash
    git clone https://github.com/your-username/calorie-counter-app.git
+
+### `npm install`
+
+### `npm start`
