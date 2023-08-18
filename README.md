@@ -1,6 +1,6 @@
 # Calorie Counter App
 
-This app allows you to track your calorie intake by searching for foods and retrieving nutrition information from the Edamam Food Aatabase API.
+This app allows you to track your calorie intake by searching for foods and retrieving nutrition information from the Edamam Food Database API.
 
 - Click "Add Food +".
 - Search for various food items provided by the Edamam Food Database API with an autocomplete feature added for convenience.
