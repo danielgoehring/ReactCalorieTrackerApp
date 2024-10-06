@@ -179,7 +179,7 @@ function CalorieTracker() {
               textAlign: 'center',
             }}
           >
-            Calorie Counter
+            CalorieSense
           </h1>
         </div>
         <TotalMacros
