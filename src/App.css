@@ -48,9 +48,19 @@ img {
   color: #61dafb;
 }
 
-/* .mealFontSize {
-  border-bottom: 1px solid gray;
-} */
+@media (max-width: 843px) {
+  .macroContainer {
+    width: 700px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
+
+  .container-03 {
+    width: 700px;
+  }
+}
 
 .macroContainer {
   display: flex;
@@ -60,7 +70,7 @@ img {
   border-left: 1px solid rgb(207, 207, 207);
   border-right: 1px solid rgb(207, 207, 207);
   background-color: rgb(246, 246, 246);
-  width: 100%;
+  width: 800px;
   max-width: 800px;
   margin: 0 auto;
   border-bottom-left-radius: 2px;
@@ -98,14 +108,14 @@ img {
 }
 
 .calorieContainer {
-  width: 58px; /* Again, adjust based on actual content and design requirements */
-  text-align: left; /* This ensures the numbers are right-aligned within their container */
+  width: 58px;
+  text-align: left;
 }
 
 .calorieContainer2 {
-  flex: 2; /* Adjust this according to your layout needs */
-  width: 200px; /* You might need to adjust this as well */
-  text-align: left; /* This ensures that the text is right-aligned within its container */
+  flex: 2;
+  width: 200px;
+  text-align: left;
   margin-left: 20px;
   font-weight: bold;
 }
@@ -168,7 +178,7 @@ img {
   justify-content: space-between;
   align-items: center;
   color: white;
-  width: 50%;
+  width: 800px;
   max-width: 800px;
   margin: 0 auto;
 }
@@ -251,10 +261,9 @@ img {
   }
 
   .calorieContainer2 div {
-    flex: 2; /* Adjust this according to your layout needs */
-    width: 200px; /* You might need to adjust this as well */
-    text-align: left; /* This ensures that the text is right-aligned within its container */
-
+    flex: 2;
+    width: 200px;
+    text-align: left;
     font-weight: bold;
   }
 
@@ -293,7 +302,7 @@ img {
     font-size: 12px;
   }
   .calorieSize {
-    font-family: 'Roboto Mono', monospace; /* or any other monospace font */
+    font-family: 'Roboto Mono', monospace;
   }
 
   .ounce-amount {
