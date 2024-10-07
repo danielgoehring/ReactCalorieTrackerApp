@@ -60,6 +60,17 @@ img {
   .container-03 {
     width: 700px;
   }
+
+  .formContainerMain {
+    display: flex;
+    flex-direction: column;
+    /* gap: 40px; */
+  }
+
+  .formContainerMain2 {
+    margin-bottom: 12px;
+    /* margin-right: 0; */
+  }
 }
 
 .macroContainer {
@@ -205,10 +216,11 @@ img {
   margin-top: 40px;
   margin-bottom: 20px;
   text-align: left;
+  gap: 30px;
 }
 
 .formContainerMain2 {
-  margin-right: 40px;
+  /* margin-right: 40px; */
 }
 
 @media (min-width: 500px) {

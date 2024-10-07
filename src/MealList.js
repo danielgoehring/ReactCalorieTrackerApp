@@ -132,7 +132,7 @@ function MealList(props) {
                   )}
                 />
               </div>
-              <div style={{ marginRight: '40px' }}>
+              <div style={{}}>
                 <Typography
                   style={{
                     paddingBottom: '10px',
