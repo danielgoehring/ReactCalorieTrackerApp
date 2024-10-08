@@ -142,9 +142,9 @@ function CalorieTracker() {
       carbs,
       protein,
       fat,
-      subtractedCarbsValue: (carbs / 193) * 100, // <-- Added this
-      subtractedFatValue: (fat / 87) * 100, // <-- Added this
-      subtractedProteinValue: (protein / 230) * 100, // <-- Added this
+      subtractedCarbsValue: (carbs / 193) * 100,
+      subtractedFatValue: (fat / 87) * 100,
+      subtractedProteinValue: (protein / 230) * 100,
     };
 
     setFoodItems((prevFoodItems) => [...prevFoodItems, newFoodItem]);
@@ -173,9 +173,9 @@ function CalorieTracker() {
           <h1
             style={{
               marginTop: '0',
-              padding: '30px 0', // Adjust padding for smaller screens
+              padding: '30px 0',
               color: 'white',
-              fontSize: '36px', // Reduce font size for smaller screens
+              fontSize: '36px',
               textAlign: 'center',
             }}
           >

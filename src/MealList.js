@@ -125,7 +125,7 @@ function MealList(props) {
                       InputProps={{
                         ...params.InputProps,
                         style: {
-                          borderColor: '#c7c7c7', // set your desired color here
+                          borderColor: '#c7c7c7',
                         },
                       }}
                     />
@@ -155,7 +155,7 @@ function MealList(props) {
                   input={
                     <Input
                       style={{ border: '1px solid #c7c7c7' }}
-                      disableUnderline // This will remove the underline
+                      disableUnderline
                     />
                   }
                   displayEmpty
@@ -183,7 +183,6 @@ function MealList(props) {
                   color="primary"
                   align="left"
                   type="submit"
-                  // onClick={toggleFoodSearch}
                 >
                   Add Food
                 </Button>
