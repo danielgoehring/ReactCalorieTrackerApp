@@ -10,24 +10,24 @@ function Meal(props) {
               {props.mealName} {props.amount} oz
             </div>
             <div className="containerMacros">
-              <div className="calorieContainer">
-                <div className="calorieSize">{props.calories}</div>
+              <div>
+                <div className="calorieContainer">
+                  <div>{props.calories}</div>
+                </div>
+
+                <div className="calorieContainer">
+                  <div>{props.carbs}</div>
+                </div>
+                <div className="calorieContainer ">
+                  <div>{props.protein}</div>
+                </div>
+                <div className="calorieContainer">
+                  <div>{props.fat}</div>
+                </div>
               </div>
 
-              <div className="calorieContainer">
-                <div className="calorieSize">{props.carbs}</div>
-              </div>
-              <div className="calorieContainer">
-                <div className="calorieSize">{props.protein}</div>
-              </div>
-              <div className="calorieContainer">
-                <div className="calorieSize">{props.fat}</div>
-              </div>
               <div className="removeMealContainer">
-                <button
-                  className="removeBtn calorieSize"
-                  onClick={props.removeMeal}
-                >
+                <button className="removeBtn " onClick={props.removeMeal}>
                   Remove
                 </button>
               </div>

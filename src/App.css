@@ -92,6 +92,7 @@ img {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin-right: 8px;
 }
 
 .containerMacros div {
@@ -201,12 +202,12 @@ img {
 
 .container-2 {
   display: flex;
-  margin-right: 140px;
+  margin-right: 153px;
 }
 
 .container-3 {
   text-align: center;
-  margin: 0 20px;
+  margin: 0 21px;
 }
 
 .formContainerMain {
@@ -242,6 +243,21 @@ img {
       font-size: 12px;
     } */
 
+  .container-3 {
+    text-align: center;
+    margin: 0 13px;
+  }
+
+  .container-2 {
+    display: flex;
+    margin-left: 68px;
+  }
+
+  .removeBtn {
+    font-size: 8px;
+    padding: 2px;
+  }
+
   .macros {
     display: flex;
     flex-direction: column;
@@ -250,9 +266,10 @@ img {
     margin-top: 20px;
   }
 
-  .formContainerMain2 {
-    margin-bottom: 30px;
+  .containerMacros {
+    margin-right: 0;
   }
+
   .macroContainer {
     display: flex;
     justify-content: space-between;
@@ -269,7 +286,7 @@ img {
   }
 
   .macroContainer {
-    font-size: 12px;
+    font-size: 10px;
   }
 
   .calorieContainer2 div {
@@ -297,13 +314,15 @@ img {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    margin: 0 14px;
+    margin: 0;
 
     font-weight: bold;
   }
 
   .containerMacros {
-    margin-right: -9px;
+    /* margin-right: -9px; */
+    /* display: flex;
+    flex-direction: column; */
   }
 
   .container-03 {
@@ -311,11 +330,11 @@ img {
   }
 
   .container-03 div {
-    font-size: 12px;
+    font-size: 9px;
   }
-  .calorieSize {
+  /* .calorieSize {
     font-family: 'Roboto Mono', monospace;
-  }
+  } */
 
   .ounce-amount {
     font-size: 24px;
