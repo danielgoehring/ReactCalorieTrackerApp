@@ -14,7 +14,7 @@ function TotalMacros(props) {
   const strokeDashoffset = circumference * (1 - progress);
 
   return (
-    <div style={{ color: 'white' }}>
+    <section style={{ color: 'white' }}>
       <div
         style={{
           display: 'flex',
@@ -175,7 +175,7 @@ function TotalMacros(props) {
           )}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

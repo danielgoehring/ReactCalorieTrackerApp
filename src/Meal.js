@@ -2,7 +2,7 @@ import React from 'react';
 
 function Meal(props) {
   return (
-    <div>
+    <section>
       <div className="mealFontSize">
         <div style={{ display: 'flex', justifyContent: 'center' }}>
           <div className="macroContainer">
@@ -35,7 +35,7 @@ function Meal(props) {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

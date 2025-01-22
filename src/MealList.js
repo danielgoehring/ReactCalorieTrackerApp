@@ -46,7 +46,7 @@ function MealList(props) {
 
   return (
     <>
-      <div className="container-01">
+      <section className="container-01">
         <div className="container-02">
           <div className="container-03">
             <div className="container-1">Name</div>
@@ -209,7 +209,7 @@ function MealList(props) {
             </button>
           </div>
         )}
-      </div>
+      </section>
     </>
   );
 }

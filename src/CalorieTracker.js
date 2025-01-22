@@ -159,7 +159,7 @@ function CalorieTracker() {
   };
 
   return (
-    <div>
+    <section>
       <div
         style={{
           backgroundColor: '#113136',
@@ -169,7 +169,7 @@ function CalorieTracker() {
       >
         <CssBaseline />
 
-        <div style={{ backgroundColor: '#113136', marginBottom: '20px' }}>
+        <header style={{ backgroundColor: '#113136', marginBottom: '20px' }}>
           <h1
             style={{
               marginTop: '0',
@@ -181,7 +181,7 @@ function CalorieTracker() {
           >
             CalorieSense
           </h1>
-        </div>
+        </header>
         <TotalMacros
           totalCalories={totalcals}
           totalCarbs={totalcarbs}
@@ -216,7 +216,7 @@ function CalorieTracker() {
         foodItems={foodItems}
         removeMeal={removeMeal}
       />
-    </div>
+    </section>
   );
 }
 
